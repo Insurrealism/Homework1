@@ -1,0 +1,62 @@
+<div class="col-sm-2 text-left">
+    <a class="list-group-item" href="/admin/table-product">
+        <span class="glyphicon glyphicon-th"> </span> Table Products
+    </a>
+    <a class="list-group-item" href="/admin/table-order">
+        <span class="glyphicon glyphicon-th"> </span> Table Orders
+    </a>
+    <a class="list-group-item" href="/admin/table-user">
+        <span class="glyphicon glyphicon-th"> </span> Table User
+    </a>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>Profile Admin</h1>
+        <div class="col-md-3 text-left pull-right">
+            <a href="/">
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </a>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-title">Table Products</h2>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Products Info</div>
+                    <div class="panel-body">
+                        <table id="product" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            {{# each products}}
+                            <tbody>
+                                <tr>
+                                    <td class="col-4 col-sm-3">
+                                        <img src="{{ this.imagePath }}" alt="..." class="img-responsive">
+                                    </td>
+                                    <td>
+                                        {{ this.title }}
+                                    </td>
+                                    <td>
+                                        {{ this.description }}
+                                    </td>
+                                    <td>
+                                        {{ this.price }}
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

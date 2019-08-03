@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-4">
+        <a href="/admin/profile-admin" class="btn btn-default" role="button">Back to Admin</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-title">Table Orders</h2>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Orders Info</div>
+            <div class="panel-body">
+                <table id="product" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Address</th>
+                            <th>Nama</th>
+                            <th>PaymentId</th>
+                        </tr>
+                    </thead>
+                    {{# each orders}}
+                    <tbody>
+                        <tr>
+                            <td class="col-4 col-sm-1">
+                                {{ this._id }}
+                            </td>
+                            <td class="col-4 col-sm-3">
+                                {{ this.user }}
+                            </td>
+                            <td>
+                                {{ this.address }}
+                            </td>
+                            <td>
+                                {{ this.name }}
+                            </td>
+                            <td>
+                                {{ this.paymentId}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

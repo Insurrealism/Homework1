@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-4">
+        <a href="/admin/table-product" class="btn btn-danger" role="button">Back to Table Product</a>
+    </div>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+    <h1>Insert Product</h1>
+    <hr>
+    <section class="insert">
+        <form action="/insert" method="post" id="insert-form">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="input form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required name="title">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="input form-group">
+                        <label for="imagePath">Image</label>
+                        <input type="text" id="imagePath" class="form-control" required name="imagePath">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="input form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" class="form-control" required name="description">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="input form-group">
+                        <label for="price">Price</label>
+                        <input type="text" id="price" class="form-control" required name="price">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-success">Insert</button>
+        </form>
+    </section>
+</div>
